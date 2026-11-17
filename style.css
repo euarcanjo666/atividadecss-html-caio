@@ -1,0 +1,176 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f9;
+    color: #18334f;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: #203a55;
+    min-height: 45px;
+    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Menu horizontal */
+.menu {
+    display: flex;
+    gap: 16px;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #b9d9ff;
+}
+
+/* Conteúdo principal */
+main {
+    padding: 14px 14px 10px;
+}
+
+.apresentacao h1 {
+    font-size: 22px;
+    margin-bottom: 13px;
+}
+
+.apresentacao p {
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+/* Organização dos cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 8px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Ícones dos cards */
+.icone {
+    width: 30px;
+    height: 30px;
+    background-color: #dfedff;
+    color: #24527b;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+/* Títulos e descrições */
+.card h2 {
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 9px;
+}
+
+.card p {
+    color: #64748b;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+/* Botão Saiba mais */
+.botao {
+    display: block;
+    width: 100%;
+    margin-top: auto;
+    padding: 5px 8px;
+    background-color: #28577e;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 11px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.botao:hover {
+    background-color: #173a59;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #172e45;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 10px 10px;
+    border-radius: 0 0 6px 6px;
+}
+
+.rodape h2 {
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.rodape p {
+    font-size: 11px;
+}
+
+/* Adaptação para celulares */
+@media (max-width: 600px) {
+    .cabecalho {
+        padding: 12px 14px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
